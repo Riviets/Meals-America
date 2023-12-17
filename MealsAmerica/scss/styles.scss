@@ -6,6 +6,7 @@ $color-white: #FFFFFF;
 $color-black: #000000;
 $color-green: #05581C;
 $color-dark-green: #366126;
+$color-light-green: #1AC94B;
 
 
 @font-face {
@@ -90,6 +91,23 @@ body {
     margin-bottom: 30px;
 }
 
+.btn {
+    cursor: pointer;
+    font-family: 'Stolzl';
+    font-weight: 700;
+    border-radius: 80px;
+
+    &-main {
+        color: $color-white;
+        background-color: $color-green;
+    }
+
+    &-secondary {
+        color: $color-green;
+        border: 2px solid $color-green;
+    }
+}
+
 /*Header*/
 
 .header {
@@ -138,23 +156,6 @@ body {
 
     &__btn {
         padding: 18px 45px;
-    }
-}
-
-.btn {
-    cursor: pointer;
-    font-family: 'Stolzl';
-    font-weight: 700;
-    border-radius: 80px;
-
-    &-main {
-        color: $color-white;
-        background-color: $color-green;
-    }
-
-    &-secondary {
-        color: $color-green;
-        border: 2px solid $color-green;
     }
 }
 
@@ -463,5 +464,41 @@ body {
         stroke: $color-black;
         max-width: 56px;
         max-height: 56px;
+    }
+}
+
+/*Schledule section*/
+
+.schledule {
+    &-section {
+        padding: 164px 0 168px;
+        background-image: url(/images/schledule-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 54px;
+        font-weight: 700;
+        margin-bottom: 50px;
+
+        .accent {
+            color: $color-light-green;
+        }
+    }
+
+    &__btn {
+        background-color: $color-light-green;
+        padding: 24px 78px;
+        color: $color-white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__content {
+        max-width: 550px;
+        margin-left: auto;
     }
 }

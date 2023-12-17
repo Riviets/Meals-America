@@ -74,6 +74,21 @@ body {
   margin-bottom: 30px;
 }
 
+.btn {
+  cursor: pointer;
+  font-family: "Stolzl";
+  font-weight: 700;
+  border-radius: 80px;
+}
+.btn-main {
+  color: #FFFFFF;
+  background-color: #05581C;
+}
+.btn-secondary {
+  color: #05581C;
+  border: 2px solid #05581C;
+}
+
 /*Header*/
 .header {
   padding: 30px 0;
@@ -116,21 +131,6 @@ body {
 }
 .header__btn {
   padding: 18px 45px;
-}
-
-.btn {
-  cursor: pointer;
-  font-family: "Stolzl";
-  font-weight: 700;
-  border-radius: 80px;
-}
-.btn-main {
-  color: #FFFFFF;
-  background-color: #05581C;
-}
-.btn-secondary {
-  color: #05581C;
-  border: 2px solid #05581C;
 }
 
 /*Hero section*/
@@ -385,4 +385,33 @@ body {
   stroke: #000000;
   max-width: 56px;
   max-height: 56px;
+}
+
+/*Schledule section*/
+.schledule-section {
+  padding: 164px 0 168px;
+  background-image: url(/images/schledule-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.schledule__title {
+  color: #FFFFFF;
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.schledule__title .accent {
+  color: #1AC94B;
+}
+.schledule__btn {
+  background-color: #1AC94B;
+  padding: 24px 78px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+}
+.schledule__content {
+  max-width: 550px;
+  margin-left: auto;
 }/*# sourceMappingURL=styles.css.map */
