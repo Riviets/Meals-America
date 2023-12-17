@@ -31,6 +31,24 @@ body {
   margin: 0 auto;
 }
 
+.title {
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #333333;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: #626262;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/*Header*/
 .header {
   padding: 30px 0;
   background-color: #FAFAFA;
@@ -56,6 +74,18 @@ body {
 .header__item {
   font-weight: 300;
   color: #333333;
+  position: relative;
+}
+.header .dropdown::after {
+  content: "";
+  background-image: url(/images/arrow.svg);
+  display: block;
+  width: 11px;
+  height: 7px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 6px;
+  right: -15px;
 }
 .header__btn {
   padding: 18px 45px;
@@ -169,4 +199,90 @@ body {
 .advantages__text {
   color: #626262;
   line-height: 150%;
+}
+
+/*About section*/
+.about-section {
+  background-color: #FAFAFA;
+  padding-bottom: 160px;
+  position: relative;
+}
+.about-section::after {
+  content: "";
+  background-image: url(/images/plate1.png);
+  background-repeat: no-repeat;
+  width: 720px;
+  height: 650px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+.about-section::before {
+  content: "";
+  display: block;
+  background-image: url(/images/decor-plates.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50px;
+  right: 580px;
+  width: 240px;
+  height: 530px;
+  z-index: 1;
+}
+.about__content {
+  position: relative;
+  z-index: 2;
+}
+.about__title {
+  margin-bottom: 67px;
+  position: relative;
+}
+.about__title::before {
+  content: "";
+  background-image: url(/images/dill.png);
+  position: absolute;
+  display: block;
+  width: 195px;
+  height: 225px;
+  top: -105px;
+  left: -85px;
+}
+.about__text {
+  max-width: 619px;
+}
+.about__list {
+  max-width: 637px;
+}
+.about__btn {
+  padding: 20px 50px;
+  margin-bottom: 52px;
+}
+.about__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.about__item {
+  font-size: 18px;
+  line-height: 155%;
+  font-weight: 500;
+  flex-basis: calc((100% - 60px) / 2);
+  color: #626262;
+}
+.about__item::before {
+  content: "";
+  background-image: url(/images/check.svg);
+  height: 13px;
+  width: 13px;
+  display: inline-block;
+  background-color: #05581C;
+  padding: 16px;
+  border-radius: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(25%);
+  position: relative;
+  left: -12px;
 }/*# sourceMappingURL=styles.css.map */
