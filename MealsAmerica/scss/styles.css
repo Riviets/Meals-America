@@ -19,6 +19,13 @@
   font-weight: 700;
   src: url("/fonts/stolzl_bold.otf") format("opentype");
 }
+@font-face {
+  font-display: swap;
+  font-family: "Miniver";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/miniver-v25-latin-regular.woff2") format("woff2");
+}
 /*General*/
 body {
   font-family: "Stolzl";
@@ -37,6 +44,25 @@ body {
   color: #333333;
   line-height: 140%;
   font-weight: 700;
+}
+
+.subtitle {
+  font-family: "Miniver";
+  margin-bottom: 25px;
+  color: #05581C;
+  font-size: 24px;
+  line-height: 110%;
+  position: relative;
+  display: inline-block;
+}
+.subtitle::after {
+  content: "";
+  display: block;
+  border: 1px solid #05581C;
+  width: 34px;
+  position: absolute;
+  bottom: 6px;
+  right: -46px;
 }
 
 .text {
@@ -86,6 +112,7 @@ body {
   position: absolute;
   top: 6px;
   right: -15px;
+  cursor: pointer;
 }
 .header__btn {
   padding: 18px 45px;
@@ -113,24 +140,24 @@ body {
   position: relative;
   overflow: hidden;
 }
-.hero-section::before {
+.hero-section::before, .hero-section::after {
   content: "";
+  position: absolute;
+}
+.hero-section::before {
   height: 1100px;
   width: 1100px;
-  background-color: #FAFAFA;
+  background-color: #F8FFF5;
   border-radius: 50%;
-  position: absolute;
   top: 47px;
   left: -92px;
   z-index: 1;
 }
 .hero-section::after {
-  content: "";
   background-image: url(/images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: right center;
   width: 1085px;
-  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
@@ -206,27 +233,30 @@ body {
   background-color: #FAFAFA;
   padding-bottom: 160px;
   position: relative;
+  overflow: hidden;
 }
-.about-section::after {
+.about__inner {
+  position: relative;
+}
+.about__inner::before, .about__inner::after {
   content: "";
-  background-image: url(/images/plate1.png);
   background-repeat: no-repeat;
+  position: absolute;
+}
+.about__inner::after {
+  background-image: url(/images/plate1.png);
   width: 720px;
   height: 650px;
   display: block;
-  position: absolute;
   top: 0;
-  right: 0;
+  right: -95px;
   z-index: 0;
 }
-.about-section::before {
-  content: "";
+.about__inner::before {
   display: block;
   background-image: url(/images/decor-plates.png);
-  background-repeat: no-repeat;
-  position: absolute;
   top: 50px;
-  right: 580px;
+  right: 480px;
   width: 240px;
   height: 530px;
   z-index: 1;
@@ -285,4 +315,74 @@ body {
   transform: translateY(25%);
   position: relative;
   left: -12px;
+}
+
+/*Benefits section*/
+.benefits__inner {
+  position: relative;
+}
+.benefits__inner::before, .benefits__inner::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+.benefits__inner::before {
+  background-image: url(/images/plate3.jpg);
+  width: 424px;
+  height: 523px;
+  top: 40px;
+  left: -5px;
+  z-index: 2;
+}
+.benefits__inner::after {
+  background-image: url(/images/plate2.jpg);
+  bottom: -13px;
+  left: 312px;
+  display: block;
+  width: 424px;
+  height: 515px;
+  z-index: 3;
+}
+.benefits__inner .decor-img {
+  position: absolute;
+  top: -60px;
+  left: 300px;
+}
+.benefits-section {
+  background-color: #FAFAFA;
+  padding-bottom: 150px;
+  position: relative;
+}
+.benefits__content {
+  max-width: 530px;
+  margin-left: auto;
+}
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.benefits__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  max-width: 380px;
+  background-color: #FFFFFF;
+}
+.benefits__item::before {
+  content: "";
+  width: 4px;
+  height: 77px;
+  background-color: #05581C;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.benefits__img {
+  fill: #FFFFFF;
+  stroke: #000000;
+  max-width: 56px;
+  max-height: 56px;
 }/*# sourceMappingURL=styles.css.map */

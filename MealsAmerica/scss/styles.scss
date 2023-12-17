@@ -1,7 +1,9 @@
 $color-bg-main: #FAFAFA;
+$color-bg-secondary: #F8FFF5;
 $color-primary: #626262;
 $color-secondary: #333333;
 $color-white: #FFFFFF;
+$color-black: #000000;
 $color-green: #05581C;
 $color-dark-green: #366126;
 
@@ -30,6 +32,14 @@ $color-dark-green: #366126;
     src: url('/fonts/stolzl_bold.otf') format('opentype');
 }
 
+@font-face {
+    font-display: swap;
+    font-family: 'Miniver';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/miniver-v25-latin-regular.woff2') format('woff2');
+}
+
 /*General*/
 
 body {
@@ -49,6 +59,26 @@ body {
     color: $color-secondary;
     line-height: 140%;
     font-weight: 700;
+}
+
+.subtitle {
+    font-family: 'Miniver';
+    margin-bottom: 25px;
+    color: $color-green;
+    font-size: 24px;
+    line-height: 110%;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        display: block;
+        border: 1px solid $color-green;
+        width: 34px;
+        position: absolute;
+        bottom: 6px;
+        right: -46px;
+    }
 }
 
 .text {
@@ -103,6 +133,7 @@ body {
         position: absolute;
         top: 6px;
         right: -15px;
+        cursor: pointer;
     }
 
     &__btn {
@@ -136,25 +167,27 @@ body {
         position: relative;
         overflow: hidden;
 
-        &::before {
+        &::before,
+        &::after {
             content: '';
+            position: absolute;
+        }
+
+        &::before {
             height: 1100px;
             width: 1100px;
-            background-color: $color-bg-main;
+            background-color: $color-bg-secondary;
             border-radius: 50%;
-            position: absolute;
             top: 47px;
             left: -92px;
             z-index: 1;
         }
 
         &::after {
-            content: '';
             background-image: url(/images/hero-bg.jpg);
             background-repeat: no-repeat;
             background-position: right center;
             width: 1085px;
-            position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
@@ -249,28 +282,35 @@ body {
         background-color: $color-bg-main;
         padding-bottom: 160px;
         position: relative;
+        overflow: hidden;
+    }
 
+    &__inner {
+        position: relative;
+
+        &::before,
         &::after {
             content: '';
-            background-image: url(/images/plate1.png);
             background-repeat: no-repeat;
+            position: absolute;
+        }
+
+        &::after {
+
+            background-image: url(/images/plate1.png);
             width: 720px;
             height: 650px;
             display: block;
-            position: absolute;
             top: 0;
-            right: 0;
+            right: -95px;
             z-index: 0;
         }
 
         &::before {
-            content: '';
             display: block;
             background-image: url(/images/decor-plates.png);
-            background-repeat: no-repeat;
-            position: absolute;
             top: 50px;
-            right: 580px;
+            right: 480px;
             width: 240px;
             height: 530px;
             z-index: 1;
@@ -339,5 +379,89 @@ body {
             position: relative;
             left: -12px;
         }
+    }
+}
+
+/*Benefits section*/
+
+.benefits {
+    &__inner {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            border-radius: 6px;
+        }
+
+        &::before {
+            background-image: url(/images/plate3.jpg);
+            width: 424px;
+            height: 523px;
+            top: 40px;
+            left: -5px;
+            z-index: 2;
+        }
+
+        &::after {
+            background-image: url(/images/plate2.jpg);
+            bottom: -13px;
+            left: 312px;
+            display: block;
+            width: 424px;
+            height: 515px;
+            z-index: 3;
+        }
+
+        .decor-img {
+            position: absolute;
+            top: -60px;
+            left: 300px;
+        }
+    }
+
+    &-section {
+        background-color: $color-bg-main;
+        padding-bottom: 150px;
+        position: relative;
+    }
+
+    &__content {
+        max-width: 530px;
+        margin-left: auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        max-width: 380px;
+        background-color: $color-white;
+
+        &::before {
+            content: '';
+            width: 4px;
+            height: 77px;
+            background-color: $color-green;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+    }
+
+    &__img {
+        fill: $color-white;
+        stroke: $color-black;
+        max-width: 56px;
+        max-height: 56px;
     }
 }
