@@ -33,6 +33,10 @@ body {
   font-size: 16px;
 }
 
+address {
+  font-style: normal;
+}
+
 .container {
   max-width: 1340px;
   margin: 0 auto;
@@ -532,7 +536,82 @@ body {
 .serve__img {
   max-width: 36px;
   max-height: 36px;
+  fill: transparent;
+  stroke: #05581C;
 }
 .serve__btn {
   padding: 20px 50px;
+}
+
+/*Footer*/
+.footer {
+  padding: 56px 0 80px;
+  background-color: #F8FFF5;
+  color: #333333;
+  position: relative;
+}
+.footer::after {
+  content: "";
+  display: block;
+  background-image: url(/images/decor-broccoli.png);
+  width: 250px;
+  height: 260px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+.footer__text {
+  font-size: 14px;
+  color: #4D6C40;
+  max-width: 310px;
+}
+.footer__link {
+  text-decoration: underline;
+  font-weight: 500;
+}
+.footer__title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer__contacts-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.footer__contacts-item.limited {
+  max-width: 225px;
+}
+.footer__icon {
+  max-height: 24px;
+  max-width: 24px;
+  fill: transparent;
+  stroke: #05581C;
+}
+
+/*Copyright section*/
+.copyright-section {
+  color: #FFFFFF;
+  line-height: 150%;
+  background-color: #05581C;
+  padding: 22px 0 22px 200px;
+}
+.copyright__link {
+  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */

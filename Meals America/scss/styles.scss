@@ -7,6 +7,7 @@ $color-black: #000000;
 $color-green: #05581C;
 $color-dark-green: #366126;
 $color-light-green: #1AC94B;
+$color-diry-green: #4D6C40;
 
 $color-accent: #A9DDB7;
 
@@ -48,6 +49,10 @@ body {
     font-family: 'Stolzl';
     font-weight: 400;
     font-size: 16px;
+}
+
+address {
+    font-style: normal;
 }
 
 .container {
@@ -667,9 +672,102 @@ body {
     &__img {
         max-width: 36px;
         max-height: 36px;
+        fill: transparent;
+        stroke: $color-green;
     }
 
     &__btn {
         padding: 20px 50px;
+    }
+}
+
+/*Footer*/
+
+.footer {
+    padding: 56px 0 80px;
+    background-color: $color-bg-secondary;
+    color: $color-secondary;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        background-image: url(/images/decor-broccoli.png);
+        width: 250px;
+        height: 260px;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: -25px;
+        right: 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: $color-diry-green;
+        max-width: 310px;
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-weight: 500;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__contacts {
+        &-item {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+
+            &.limited {
+                max-width: 225px;
+            }
+        }
+    }
+
+    &__icon {
+        max-height: 24px;
+        max-width: 24px;
+        fill: transparent;
+        stroke: $color-green;
+    }
+}
+
+/*Copyright section*/
+
+.copyright {
+
+    &-section {
+        color: $color-white;
+        line-height: 150%;
+        background-color: $color-green;
+        padding: 22px 0 22px 200px;
+    }
+
+    &__link {
+        text-decoration: underline;
     }
 }
