@@ -8,7 +8,6 @@ $color-green: #05581C;
 $color-dark-green: #366126;
 $color-light-green: #1AC94B;
 $color-diry-green: #4D6C40;
-
 $color-accent: #A9DDB7;
 
 @font-face {
@@ -56,7 +55,8 @@ address {
 }
 
 .container {
-    max-width: 1340px;
+    max-width: 1360px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -155,7 +155,8 @@ address {
         height: 7px;
         background-repeat: no-repeat;
         position: absolute;
-        top: 6px;
+        top: 50%;
+        transform: translateY(-50%);
         right: -15px;
         cursor: pointer;
     }
@@ -169,10 +170,17 @@ address {
 
 .hero {
     &-section {
-        padding: 298px 0 177px;
         background-color: $color-bg-main;
         position: relative;
         overflow: hidden;
+    }
+
+    &__inner {
+        padding: 298px 0 177px;
+        position: relative;
+        max-width: 1550px;
+        margin: 0 auto;
+
 
         &::before,
         &::after {
@@ -186,7 +194,7 @@ address {
             background-color: $color-bg-secondary;
             border-radius: 50%;
             top: 47px;
-            left: -92px;
+            left: -270px;
             z-index: 1;
         }
 
@@ -382,8 +390,9 @@ address {
             border-radius: 8px;
             background-position: center;
             background-repeat: no-repeat;
-            transform: translateY(25%);
             position: relative;
+            top: 50%;
+            transform: translateY(-50%);
             left: -12px;
         }
     }
@@ -431,7 +440,6 @@ address {
 
     &-section {
         background-color: $color-bg-main;
-        padding-bottom: 150px;
         position: relative;
     }
 
@@ -466,8 +474,8 @@ address {
     }
 
     &__img {
-        fill: $color-white;
-        stroke: $color-black;
+        stroke: $color-primary;
+        fill: transparent;
         max-width: 56px;
         max-height: 56px;
     }
@@ -513,29 +521,36 @@ address {
 
 .nutrition {
     &-section {
-        background-color: $color-green;
-        padding: 90px 0 100px;
+        padding: 160px 0 0 0;
+        position: relative;
+        overflow: hidden;
+        background-color: $color-bg-main;
+
+
+        &::after {
+            content: '';
+            display: block;
+            width: 360px;
+            height: 480px;
+            background-image: url(/images/decor-salad.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 30px;
+            right: -100px;
+        }
+
+        .btn+.btn {
+            margin-left: 28px;
+        }
     }
 
     &__inner {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 1340px;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        // &::before {
-        //     content: '';
-        //     display: block;
-        //     width: 550px;
-        //     height: 540px;
-        //     background-image: url(/images/decor-salad.png);
-        //     background-repeat: no-repeat;
-        //     position: absolute;
-        //     top: -270px;
-        //     right: -375px;
-        // }
+        background-color: $color-green;
+        border-top-left-radius: 180px;
+        padding: 90px 0 100px;
     }
 
     &__content {
@@ -543,6 +558,9 @@ address {
         border-radius: 50px;
         padding: 60px;
         width: 100%;
+        max-width: 1340px;
+        margin: 0 auto;
+        position: relative;
     }
 
     &__subtitle {
@@ -576,6 +594,10 @@ address {
         }
     }
 
+    &__img {
+        max-height: 414px;
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -600,12 +622,13 @@ address {
 
     &__meals {
         display: flex;
+        align-items: center;
         gap: 25px;
 
         &-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             color: $color-primary;
             list-style-type: disc;
             margin-left: 25px;
@@ -627,6 +650,7 @@ address {
 .serve {
     &-section {
         padding: 135px 0 160px;
+        overflow: hidden;
     }
 
     &__inner {
@@ -635,17 +659,18 @@ address {
         padding: 84px 130px;
         position: relative;
 
-        // &::after {
-        //     content: '';
-        //     display: block;
-        //     width: 950px;
-        //     height: 500px;
-        //     background-image: url(/images/deliver.png);
-        //     background-repeat: no-repeat;
-        //     position: absolute;
-        //     top: 0;
-        //     right: -260px;
-        // }
+        &::after {
+            content: '';
+            display: block;
+            width: 950px;
+            height: 500px;
+            background-image: url(/images/delivery-man.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            right: -260px;
+            transform: translateY(-50%);
+        }
     }
 
     &__content {
@@ -704,7 +729,9 @@ address {
     &__container {
         display: flex;
         justify-content: space-between;
-        max-width: 1140px;
+        gap: 40px;
+        max-width: 1160px;
+        padding: 0 10px;
         margin: 0 auto;
     }
 
@@ -740,6 +767,7 @@ address {
         &-item {
             display: flex;
             align-items: center;
+            gap: 8px;
             font-size: 18px;
 
             &.limited {

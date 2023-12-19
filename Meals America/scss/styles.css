@@ -38,7 +38,8 @@ address {
 }
 
 .container {
-  max-width: 1340px;
+  max-width: 1360px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -129,7 +130,8 @@ address {
   height: 7px;
   background-repeat: no-repeat;
   position: absolute;
-  top: 6px;
+  top: 50%;
+  transform: translateY(-50%);
   right: -15px;
   cursor: pointer;
 }
@@ -139,25 +141,30 @@ address {
 
 /*Hero section*/
 .hero-section {
-  padding: 298px 0 177px;
   background-color: #FAFAFA;
   position: relative;
   overflow: hidden;
 }
-.hero-section::before, .hero-section::after {
+.hero__inner {
+  padding: 298px 0 177px;
+  position: relative;
+  max-width: 1550px;
+  margin: 0 auto;
+}
+.hero__inner::before, .hero__inner::after {
   content: "";
   position: absolute;
 }
-.hero-section::before {
+.hero__inner::before {
   height: 1100px;
   width: 1100px;
   background-color: #F8FFF5;
   border-radius: 50%;
   top: 47px;
-  left: -92px;
+  left: -270px;
   z-index: 1;
 }
-.hero-section::after {
+.hero__inner::after {
   background-image: url(/images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: right center;
@@ -316,8 +323,9 @@ address {
   border-radius: 8px;
   background-position: center;
   background-repeat: no-repeat;
-  transform: translateY(25%);
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   left: -12px;
 }
 
@@ -355,7 +363,6 @@ address {
 }
 .benefits-section {
   background-color: #FAFAFA;
-  padding-bottom: 150px;
   position: relative;
 }
 .benefits__content {
@@ -385,8 +392,8 @@ address {
   border-bottom-left-radius: 6px;
 }
 .benefits__img {
-  fill: #FFFFFF;
-  stroke: #000000;
+  stroke: #626262;
+  fill: transparent;
   max-width: 56px;
   max-height: 56px;
 }
@@ -422,23 +429,41 @@ address {
 
 /*Nutrition section*/
 .nutrition-section {
-  background-color: #05581C;
-  padding: 90px 0 100px;
+  padding: 160px 0 0 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #FAFAFA;
+}
+.nutrition-section::after {
+  content: "";
+  display: block;
+  width: 360px;
+  height: 480px;
+  background-image: url(/images/decor-salad.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30px;
+  right: -100px;
+}
+.nutrition-section .btn + .btn {
+  margin-left: 28px;
 }
 .nutrition__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1340px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
+  background-color: #05581C;
+  border-top-left-radius: 180px;
+  padding: 90px 0 100px;
 }
 .nutrition__content {
   background-color: #F8FFF5;
   border-radius: 50px;
   padding: 60px;
   width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  position: relative;
 }
 .nutrition__subtitle {
   color: #A9DDB7;
@@ -466,6 +491,9 @@ address {
   font-weight: 500;
   margin-bottom: 22px;
 }
+.nutrition__img {
+  max-height: 414px;
+}
 .nutrition__item {
   display: flex;
   flex-direction: column;
@@ -487,12 +515,13 @@ address {
 }
 .nutrition__meals {
   display: flex;
+  align-items: center;
   gap: 25px;
 }
 .nutrition__meals-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   color: #626262;
   list-style-type: disc;
   margin-left: 25px;
@@ -508,12 +537,25 @@ address {
 /*Serve section*/
 .serve-section {
   padding: 135px 0 160px;
+  overflow: hidden;
 }
 .serve__inner {
   background-color: #F8FFF5;
   border-radius: 28px;
   padding: 84px 130px;
   position: relative;
+}
+.serve__inner::after {
+  content: "";
+  display: block;
+  width: 950px;
+  height: 500px;
+  background-image: url(/images/delivery-man.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -260px;
+  transform: translateY(-50%);
 }
 .serve__content {
   max-width: 525px;
@@ -564,7 +606,9 @@ address {
 .footer__container {
   display: flex;
   justify-content: space-between;
-  max-width: 1140px;
+  gap: 40px;
+  max-width: 1160px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 .footer .logo {
@@ -593,6 +637,7 @@ address {
 .footer__contacts-item {
   display: flex;
   align-items: center;
+  gap: 8px;
   font-size: 18px;
 }
 .footer__contacts-item.limited {
