@@ -315,50 +315,49 @@
         <form class="modal__form" action="#">
           <div class="modal__form-data">
             <label class="modal__label required" for="name">Name</label>
-            <input class="modal__input" type="text" id="name" required>
+            <input class="modal__input" type="text" id="name" name="name" required>
           </div>
           <div class="modal__form-data">
             <label class="modal__label" for="organization">Organization</label>
-            <input class="modal__input" type="text" id="organization">
+            <input class="modal__input" type="text" id="organization" name="organization">
           </div>
           <div class="modal__form-data">
             <label class="modal__label" for="email">E-mail Address</label>
-            <input class="modal__input" type="email" id="email">
+            <input class="modal__input" type="email" id="email" name="email">
           </div>
           <div class="modal__form-data">
             <label class="modal__label required" for="city">City</label>
-            <input class="modal__input" type="text" id="city" required>
+            <input class="modal__input" type="text" id="city" name="city" required>
           </div>
           <div class="modal__form-data">
             <label class="modal__label required" for="country">Country</label>
-            <input class="modal__input" type="text" id="country" required>
+            <input class="modal__input" type="text" id="country" name="country" required>
           </div>
           <div class="modal__form-data">
             <label class="modal__label required" for="zipcode">Zip Code</label>
-            <input class="modal__input" type="number" id="zipcode" required>
+            <input class="modal__input" type="number" id="zipcode" name="zipcode" required>
           </div>
           <div class="modal__form-data">
             <label class="modal__label required" for="number">Phone Number</label>
-            <input class="modal__input" type="tel" id="number" required>
+            <input class="modal__input" type="tel" id="number" name="number" required>
           </div>
           <div class="modal__form-data">
             <label class="modal__label required" for="state">State</label>
-            <input class="modal__input" type="text" id="state" required>
+            <input class="modal__input" type="text" id="state" name="state" required>
           </div>
           <div class="modal__form-data full-width">
             <label class="modal__label required" for="needs">Tell us about your needs</label>
-             <select class="modal__input" id="needs" required>
+             <select class="modal__input modal__select" id="needs" required>
                   <option value="" disabled selected>—Please choose an option—</option>
-                  <option class="modal__option" value="I'm a current customer needing assistance">I'm a current customer needing assistance</option>
-                  <option class="modal__option" value="I'm a caregiver or need meals for myself">I'm a caregiver or need meals for myself</option>
-                  <option class="modal__option" value="I'm a case manager needing meals for clients">I'm a case manager needing meals for clients</option>
-                  <option class="modal__option" value="I represent a healthcare organization needing information for patients">I represent a healthcare organization needing information for patients</option>
+                  <option class="modal__option" value="customer">I'm a current customer needing assistance</option>
+                  <option class="modal__option" value="caregiver">I'm a caregiver or need meals for myself</option>
+                  <option class="modal__option" value="case manager">I'm a case manager needing meals for clients</option>
+                  <option class="modal__option" value="healthcare organization">I represent a healthcare organization needing information for patients</option>
             </select>
           </div>
-          <div class="modal__form-data full-width">
-            <label class="modal__label" for="comments">Provide any additional comments</label>
-            <input class="modal__input" type="text" id="comments">
-          </div>
+          <label class="modal__label" for="comments">Provide any additional comments</label>
+          <textarea class="modal__comments full-width" name="comments" id="comments">
+          </textarea>
           <button class="modal__btn btn btn-primary">submit</button>
 
         </form>
