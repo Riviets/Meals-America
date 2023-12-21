@@ -33,6 +33,10 @@ body {
   font-size: 16px;
 }
 
+button {
+  cursor: pointer;
+}
+
 address {
   font-style: normal;
 }
@@ -80,18 +84,26 @@ address {
 }
 
 .btn {
-  cursor: pointer;
   font-family: "Stolzl";
   font-weight: 700;
   border-radius: 80px;
+  transition: color 0.3s, background-color 0.3s;
+  text-transform: uppercase;
 }
 .btn-primary {
   color: #FFFFFF;
   background-color: #05581C;
 }
+.btn-primary:hover {
+  background-color: #366126;
+}
 .btn-secondary {
   color: #05581C;
   border: 2px solid #05581C;
+}
+.btn-secondary:hover {
+  color: #FFFFFF;
+  background-color: #05581C;
 }
 
 /*Header*/
@@ -285,7 +297,7 @@ address {
   background-image: url(/images/dill.png);
   position: absolute;
   display: block;
-  width: 195px;
+  width: 192px;
   height: 225px;
   top: -105px;
   left: -85px;
@@ -659,4 +671,100 @@ address {
 }
 .copyright__link {
   text-decoration: underline;
+}
+
+/*Modal*/
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 9;
+}
+.backdrop.is-hidden {
+  visibility: none;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  max-width: 995px;
+  max-height: 1090px;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  padding: 50px 50px 40px 50px;
+  position: relative;
+}
+.modal__title {
+  font-size: 36px;
+  color: #333333;
+  margin-bottom: 48px;
+}
+.modal__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 34px;
+}
+.modal__form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-basis: calc((100% - 34px) / 2);
+}
+.modal__form-data.full-width {
+  flex-basis: 100%;
+}
+.modal__label {
+  color: #626262;
+  font-size: 15px;
+}
+.modal__label.required::after {
+  content: "*";
+  color: red;
+  padding-left: 8px;
+}
+.modal__input {
+  outline: 1px solid #A9DDB7;
+  border-radius: 10px;
+  height: 80px;
+  max-height: 80px;
+  background-color: transparent;
+  padding: 30px 25px;
+  color: #626262;
+  font-size: 16px;
+  font-family: "Stolzl";
+}
+.modal__option {
+  padding: 25px;
+  color: #626262;
+}
+.modal__option:hover {
+  color: #05581C;
+  background-color: #A9DDB7;
+}
+.modal__btn {
+  padding: 18px 67px;
+}
+.modal__icon {
+  fill: #626262;
+  max-width: 23px;
+  max-height: 23px;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 44px;
+  right: 53px;
+}
+.modal select {
+  outline: none;
+  border: 1px solid #A9DDB7;
 }/*# sourceMappingURL=styles.css.map */

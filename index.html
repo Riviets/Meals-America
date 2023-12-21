@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Meals America</title>
     <link rel="stylesheet" href="/scss/reset.css" />
     <link rel="stylesheet" href="/scss/styles.css" />
   </head>
@@ -24,7 +24,7 @@
               <li class="header__item"><a class="header__link" href="#">Contact</a></li>
             </ul>
           </nav>
-          <button type="button" class="btn btn-primary header__btn">Get Started</button>
+          <button type="button" class="btn btn-primary header__btn modal-open-btn">Get Started</button>
         </div>
       </div>
     </header>
@@ -304,5 +304,66 @@
         &copy;All rights resereved <a class="copyright__link" href="#">MealsAmericaFL.com</a>
       </div>
     </section>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-close-btn" type="button">
+          <svg class="modal__icon">
+            <use href="/images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="modal__title">Get Started</h2>
+        <form class="modal__form" action="#">
+          <div class="modal__form-data">
+            <label class="modal__label required" for="name">Name</label>
+            <input class="modal__input" type="text" id="name" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label" for="organization">Organization</label>
+            <input class="modal__input" type="text" id="organization">
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label" for="email">E-mail Address</label>
+            <input class="modal__input" type="email" id="email">
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="city">City</label>
+            <input class="modal__input" type="text" id="city" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="country">Country</label>
+            <input class="modal__input" type="text" id="country" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="zipcode">Zip Code</label>
+            <input class="modal__input" type="number" id="zipcode" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="number">Phone Number</label>
+            <input class="modal__input" type="tel" id="number" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="state">State</label>
+            <input class="modal__input" type="text" id="state" required>
+          </div>
+          <div class="modal__form-data full-width">
+            <label class="modal__label required" for="needs">Tell us about your needs</label>
+             <select class="modal__input" id="needs" required>
+                  <option value="" disabled selected>—Please choose an option—</option>
+                  <option class="modal__option" value="I'm a current customer needing assistance">I'm a current customer needing assistance</option>
+                  <option class="modal__option" value="I'm a caregiver or need meals for myself">I'm a caregiver or need meals for myself</option>
+                  <option class="modal__option" value="I'm a case manager needing meals for clients">I'm a case manager needing meals for clients</option>
+                  <option class="modal__option" value="I represent a healthcare organization needing information for patients">I represent a healthcare organization needing information for patients</option>
+            </select>
+          </div>
+          <div class="modal__form-data full-width">
+            <label class="modal__label" for="comments">Provide any additional comments</label>
+            <input class="modal__input" type="text" id="comments">
+          </div>
+          <button class="modal__btn btn btn-primary">submit</button>
+
+        </form>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
   </body>
 </html>
