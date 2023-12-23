@@ -1,0 +1,49 @@
+.header {
+    padding: 30px 0;
+    background-color: $color-bg-main;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-grow: 1;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        gap: 55px;
+    }
+
+    &__item {
+        font-weight: 300;
+        color: $color-secondary;
+        position: relative;
+    }
+
+    .dropdown::after {
+        content: '';
+        background-image: url(/images/arrow.svg);
+        display: block;
+        width: 11px;
+        height: 7px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -15px;
+        cursor: pointer;
+    }
+
+    &__btn {
+        padding: 18px 45px;
+    }
+}

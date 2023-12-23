@@ -1,0 +1,105 @@
+.about {
+    &-section {
+        background-color: $color-bg-main;
+        padding-bottom: 160px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__inner {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            background-repeat: no-repeat;
+            position: absolute;
+        }
+
+        &::after {
+
+            background-image: url(/images/plate1.png);
+            width: 720px;
+            height: 650px;
+            display: block;
+            top: 0;
+            right: -95px;
+            z-index: 0;
+        }
+
+        &::before {
+            display: block;
+            background-image: url(/images/decor-plates.png);
+            top: 50px;
+            right: 480px;
+            width: 240px;
+            height: 530px;
+            z-index: 1;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        margin-bottom: 67px;
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url(/images/dill.png);
+            position: absolute;
+            display: block;
+            width: 192px;
+            height: 225px;
+            top: -105px;
+            left: -85px;
+        }
+    }
+
+    &__text {
+        max-width: 619px;
+    }
+
+    &__list {
+        max-width: 637px;
+    }
+
+    &__btn {
+        padding: 20px 50px;
+        margin-bottom: 52px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    &__item {
+        font-size: 18px;
+        line-height: 155%;
+        font-weight: 500;
+        flex-basis: calc((100% - 60px) / 2);
+        color: $color-primary;
+
+        &::before {
+            content: '';
+            background-image: url(/images/check.svg);
+            height: 13px;
+            width: 13px;
+            display: inline-block;
+            background-color: $color-green;
+            padding: 16px;
+            border-radius: 8px;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -12px;
+        }
+    }
+}

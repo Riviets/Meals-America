@@ -1,0 +1,42 @@
+.advantages {
+    &-section {
+        background-color: $color-bg-main;
+        padding: 40px 0 150px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    &__item {
+        flex-basis: calc((100% - 50px) / 3);
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        padding: 32px 27px;
+        background-color: $color-white;
+        border-radius: 10px;
+    }
+
+    &__img {
+        max-width: 70px;
+        fill: $color-green;
+    }
+
+    &__title {
+        font-size: 18px;
+        color: $color-secondary;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    &__text {
+        color: $color-primary;
+        line-height: 150%;
+    }
+}

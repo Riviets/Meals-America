@@ -1,0 +1,42 @@
+.container {
+    max-width: 1360px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: $color-secondary;
+    line-height: 140%;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-family: 'Miniver';
+    margin-bottom: 25px;
+    color: $color-green;
+    font-size: 24px;
+    line-height: 110%;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        display: block;
+        border: 1px solid $color-green;
+        width: 34px;
+        position: absolute;
+        bottom: 6px;
+        right: -46px;
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: $color-primary;
+    font-size: 20px;
+    margin-bottom: 30px;
+}

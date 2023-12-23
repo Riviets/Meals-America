@@ -1,0 +1,26 @@
+.btn {
+    font-family: 'Stolzl';
+    font-weight: 700;
+    border-radius: 80px;
+    transition: color 0.3s, background-color .3s;
+    text-transform: uppercase;
+
+    &-primary {
+        color: $color-white;
+        background-color: $color-green;
+
+        &:hover {
+            background-color: $color-dark-green;
+        }
+    }
+
+    &-secondary {
+        color: $color-green;
+        border: 2px solid $color-green;
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-green;
+        }
+    }
+}

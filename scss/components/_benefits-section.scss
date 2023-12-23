@@ -1,0 +1,80 @@
+.benefits {
+    &__inner {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            border-radius: 6px;
+        }
+
+        &::before {
+            background-image: url(/images/plate3.jpg);
+            width: 424px;
+            height: 523px;
+            top: 40px;
+            left: -5px;
+            z-index: 2;
+        }
+
+        &::after {
+            background-image: url(/images/plate2.jpg);
+            bottom: -13px;
+            left: 312px;
+            display: block;
+            width: 424px;
+            height: 515px;
+            z-index: 3;
+        }
+
+        .decor-img {
+            position: absolute;
+            top: -60px;
+            left: 300px;
+        }
+    }
+
+    &-section {
+        background-color: $color-bg-main;
+        position: relative;
+    }
+
+    &__content {
+        max-width: 530px;
+        margin-left: auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        max-width: 380px;
+        background-color: $color-white;
+
+        &::before {
+            content: '';
+            width: 4px;
+            height: 77px;
+            background-color: $color-green;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+    }
+
+    &__img {
+        stroke: $color-primary;
+        fill: transparent;
+        max-width: 56px;
+        max-height: 56px;
+    }
+}

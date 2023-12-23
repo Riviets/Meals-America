@@ -1,0 +1,33 @@
+.schledule {
+    &-section {
+        padding: 164px 0 168px;
+        background-image: url(/images/schledule-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 54px;
+        font-weight: 700;
+        margin-bottom: 50px;
+
+        .accent {
+            color: $color-light-green;
+        }
+    }
+
+    &__btn {
+        background-color: $color-light-green;
+        padding: 24px 78px;
+        color: $color-white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__content {
+        max-width: 550px;
+        margin-left: auto;
+    }
+}

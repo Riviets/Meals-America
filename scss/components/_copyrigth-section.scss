@@ -1,0 +1,13 @@
+.copyright {
+
+    &-section {
+        color: $color-white;
+        line-height: 150%;
+        background-color: $color-green;
+        padding: 22px 0 22px 200px;
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+}
