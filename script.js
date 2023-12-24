@@ -13,6 +13,6 @@ const menu = document.querySelector('.mobile-menu')
 const menuOpenBtn = document.querySelector('.menu-btn-open')
 const menuCloseBtn = document.querySelector('.menu-btn-close')
 
-const toggleMenu = () => menu.classList.toggle('.is-open')
+const toggleMenu = () => menu.classList.toggle('is-open')
 menuOpenBtn.addEventListener('click', toggleMenu);
 menuCloseBtn.addEventListener('click', toggleMenu);

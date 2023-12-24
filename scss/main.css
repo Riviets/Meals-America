@@ -80,6 +80,13 @@ p {
   margin-top: 0;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   left: -10000px;
@@ -492,11 +499,7 @@ p {
 .header__burger {
   max-width: 24px;
   max-height: 24px;
-  border: none;
-  background-color: transparent;
   fill: var(--color-primary-light);
-  padding: 0;
-  cursor: pointer;
 }
 .header__burger-img {
   max-width: 24px;
@@ -717,6 +720,69 @@ p {
 .traditions-section__img {
   border-top-right-radius: 400px;
   border-top-left-radius: 400px;
+}
+
+.mobile-menu {
+  width: 100%;
+  max-width: 360px;
+  background-color: var(--color-primary-light);
+  padding: 16px 24px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.mobile-menu .logo-black {
+  margin-bottom: 32px;
+}
+.mobile-menu .logo-black img {
+  min-height: 38px;
+  min-width: 72px;
+}
+.mobile-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.mobile-menu__list .link {
+  color: var(--color-primary-dark);
+}
+.mobile-menu.is-open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+.mobile-menu::after {
+  width: 190px;
+  height: 225px;
+  background-image: url(/images/decor-bread-text.png);
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: block;
+  content: "";
+}
+
+.menu-btn-close {
+  max-width: 12px;
+  max-height: 12px;
+  position: absolute;
+  top: 22px;
+  right: 27px;
+}
+.menu-btn-close__icon {
+  max-width: 12px;
+  max-height: 12px;
 }
 
 .container {

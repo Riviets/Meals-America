@@ -32,11 +32,7 @@
     &__burger {
         max-width: 24px;
         max-height: 24px;
-        border: none;
-        background-color: transparent;
         fill: var(--color-primary-light);
-        padding: 0;
-        cursor: pointer;
 
         &-img {
             max-width: 24px;
@@ -55,5 +51,4 @@
             display: block;
         }
     }
-
 }

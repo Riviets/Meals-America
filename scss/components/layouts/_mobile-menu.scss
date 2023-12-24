@@ -1,0 +1,59 @@
+.mobile-menu {
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--color-primary-light);
+    padding: 16px 24px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform .3s;
+    transform: translateX(100%);
+
+    .logo-black {
+        img {
+            min-height: 38px;
+            min-width: 72px;
+        }
+
+        margin-bottom: 32px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        & .link {
+            color: var(--color-primary-dark);
+        }
+    }
+
+    &.is-open {
+        transform: translateX(0%);
+    }
+
+    &::after {
+        width: 190px;
+        height: 225px;
+        background-image: url(/images/decor-bread-text.png);
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        display: block;
+        content: '';
+    }
+}
+
+.menu-btn-close {
+    max-width: 12px;
+    max-height: 12px;
+    position: absolute;
+    top: 22px;
+    right: 27px;
+
+    &__icon {
+        max-width: 12px;
+        max-height: 12px;
+    }
+}
