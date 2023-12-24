@@ -1,50 +1,44 @@
 .footer {
-    padding: 56px 0 80px;
-    background-color: $color-bg-secondary;
-    color: $color-secondary;
+    background-image: url(/images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-primary-dark);
+    padding: 32px 0;
     position: relative;
 
+    &::before,
     &::after {
-        content: '';
-        display: block;
-        background-image: url(/images/decor-broccoli.png);
-        width: 250px;
-        height: 260px;
-        background-repeat: no-repeat;
+        content: "";
         position: absolute;
-        bottom: -25px;
+        bottom: 0;
+    }
+
+    &::before {
+        background-image: url(/images/decor-bread-small.png);
+        left: 0;
+        width: 180px;
+        height: 120px;
+        background-repeat: no-repeat;
+    }
+
+    &::after {
+        background-image: url(/images/decor-bread-large.png);
         right: 0;
+        width: 380px;
+        height: 180px;
     }
 
     &__container {
         display: flex;
-        justify-content: space-between;
-        gap: 40px;
-        max-width: 1160px;
-        padding: 0 10px;
-        margin: 0 auto;
+        gap: 20px;
     }
 
-    .logo {
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    &__text {
-        font-size: 14px;
-        color: $color-diry-green;
-        max-width: 310px;
-    }
-
-    &__link {
-        text-decoration: underline;
-        font-weight: 500;
-    }
-
-    &__title {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 24px;
+    &__nav,
+    &__address {
+        display: flex;
+        flex-basis: 50%;
+        gap: 20px;
     }
 
     &__list {
@@ -53,23 +47,45 @@
         gap: 16px;
     }
 
-    &__contacts {
-        &-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 18px;
-
-            &.limited {
-                max-width: 225px;
-            }
-        }
+    &__logo {
+        display: inline-block;
     }
 
-    &__icon {
-        max-height: 24px;
-        max-width: 24px;
-        fill: transparent;
-        stroke: $color-green;
+    &__list,
+    &__logo {
+        flex-grow: 1;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 22px;
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__address {
+        &-link {
+            color: var(--color-primary-light);
+            font-size: 16px;
+            font-weight: 300;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--color-brand-dark);
+            }
+        }
+
+        &-copyright {
+            color: var(--color-copyright);
+            font-size: 14px;
+        }
+
+        &-icon {
+            fill: var(--color-primary-light);
+        }
     }
 }

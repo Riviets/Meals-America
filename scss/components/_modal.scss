@@ -4,117 +4,61 @@
     align-items: center;
     position: fixed;
     top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .8);
-    overflow: auto;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: opacity 0.3s, visibility 0.3s;
-    z-index: 9;
+}
 
-    &.is-hidden {
-        visibility: none;
-        pointer-events: none;
-        opacity: 0;
-    }
+.backdrop.is-hidden {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .modal {
-    width: 100%;
     height: 100%;
-    max-width: 995px;
-    max-height: 1120px;
-    background-color: $color-white;
-    border-radius: 40px;
-    padding: 50px 50px 40px 50px;
+    width: 100%;
+    max-height: 880px;
+    max-width: 880px;
+    border-radius: 32px;
+    background-color: var(--color-primary-light);
+    padding: 128px;
+    text-align: center;
+    overflow: auto;
     position: relative;
 
     &__title {
-        font-size: 36px;
-        color: $color-secondary;
-        margin-bottom: 48px;
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 130%;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        font-size: 18px;
+        margin-bottom: 72px;
+    }
+
+    &-btn-close {
+        position: absolute;
+        top: 40px;
+        right: 40px;
     }
 
     &__form {
         display: flex;
-        flex-wrap: wrap;
-        gap: 25px 34px;
+        flex-direction: column;
 
-        &-data {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            flex-basis: calc((100% - 34px) / 2);
-
-            &.full-width {
-                flex-basis: 100%;
-            }
+        &-field {
+            margin-bottom: 32px;
         }
     }
 
-    &__label {
-        color: $color-primary;
-        font-size: 15px;
-        width: 100%;
-
-        &.required {
-
-            &::after {
-                content: '*';
-                color: red;
-                padding-left: 8px;
-            }
-        }
-    }
-
-    &__input {
-        outline: 1px solid $color-accent;
-        border-radius: 10px;
-        height: 80px;
-        max-height: 80px;
-        background-color: transparent;
-        padding: 30px 25px;
-        color: $color-primary;
-        font-size: 16px;
-        font-family: 'Stolzl';
-    }
-
-    &__option {
-        padding: 25px;
-        color: $color-primary;
-
-        &:hover {
-            color: $color-green;
-            background-color: $color-accent;
-        }
-    }
-
-    &__btn {
-        padding: 18px 67px;
-    }
-
-    &__icon {
-        fill: $color-primary;
-        max-width: 23px;
-        max-height: 23px;
-    }
-
-    &-close-btn {
-        position: absolute;
-        top: 44px;
-        right: 53px;
-    }
-
-    &__select {
-        outline: none;
-        border: 1px solid $color-accent;
-    }
-
-    &__comments {
-        border: 1px solid $color-accent;
-        border-radius: 10px;
-        width: 100% !important;
-        height: 150px;
-        resize: none;
+    &__button {
+        margin-bottom: 24px;
     }
 }

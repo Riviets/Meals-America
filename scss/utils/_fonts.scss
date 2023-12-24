@@ -1,31 +1,27 @@
 @font-face {
     font-display: swap;
-    font-family: 'Stolzl';
-    font-style: normal;
+    font-family: "Poppins";
+    font-weight: 300;
+    src: url("../fonts/poppins-v20-latin-300.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Poppins";
     font-weight: 400;
-    src: url(/fonts/stolzl_regular.otf) format('opentype');
+    src: url("../fonts/poppins-v20-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
-    font-family: 'Stolzl';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/fonts/stolzl_medium.otf') format('opentype');
+    font-family: "Poppins";
+    font-weight: 600;
+    src: url("../fonts/poppins-v20-latin-600.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
-    font-family: 'Stolzl';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/stolzl_bold.otf') format('opentype');
-}
-
-@font-face {
-    font-display: swap;
-    font-family: 'Miniver';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/miniver-v25-latin-regular.woff2') format('woff2');
+    font-family: "Poppins";
+    font-weight: 900;
+    src: url("../fonts/poppins-v20-latin-900.woff2") format("woff2");
 }

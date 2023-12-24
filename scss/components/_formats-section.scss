@@ -1,0 +1,48 @@
+.formats-section {
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    &__title {
+        margin-bottom: 80px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex-basis: calc((100% - 40px) / 3);
+    }
+}
+
+.format-card {
+    padding: 24px;
+    background-image: linear-gradient(180deg,
+            rgba(49, 38, 26, 0) 55.21%,
+            rgba(49, 38, 26, 0.71) 72.92%,
+            #31261a 100%);
+    height: 444px;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    transition: transform 0.3s;
+
+    &__title {
+        color: var(--color-primary-light);
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

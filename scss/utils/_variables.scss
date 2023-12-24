@@ -1,11 +1,13 @@
-$color-bg-main: #FAFAFA;
-$color-bg-secondary: #F8FFF5;
-$color-primary: #626262;
-$color-secondary: #333333;
-$color-white: #FFFFFF;
-$color-black: #000000;
-$color-green: #05581C;
-$color-dark-green: #366126;
-$color-light-green: #1AC94B;
-$color-diry-green: #4D6C40;
-$color-accent: #A9DDB7;
+:root {
+    --color-primary-dark: #31261a;
+    --color-primary-light: #faf4ea;
+    --color-brand-normal: #819b57;
+    --color-brand-light: #cfcfbc;
+    --color-brand-dark: #465929;
+    --color-copyright: #a18268;
+    --font-poppins: "Poppins", sans-serif;
+}
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1280px;

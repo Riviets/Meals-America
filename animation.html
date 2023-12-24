@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animation</title>
+    <style>
+      .container {
+        height: 400px;
+        width: 400px;
+        border: 2px solid red;
+        padding: 10px;
+        animation-name: background-color-changing;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .child {
+        height: 200px;
+        width: 200px;
+        background-color: green;
+        border-radius: 50%;
+        animation-name: square-movement;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes square-movement {
+        0% {
+          transform: translate(0%, 0%);
+          background-color: green;
+        }
+        25% {
+          transform: translate(100%, 0%);
+          background-color: red;
+        }
+        50% {
+          transform: translate(100%, 100%);
+          background-color: yellow;
+        }
+        75% {
+          transform: translate(0%, 100%);
+          background-color: blue;
+        }
+        100% {
+          transform: translate(0%, 0%);
+          background-color: green;
+        }
+      }
+      @keyframes background-color-changing {
+        25% {
+          background-color: blue;
+        }
+        50% {
+          background-color: green;
+        }
+        75% {
+          background-color: red;
+        }
+        100% {
+          background-color: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
