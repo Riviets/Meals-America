@@ -1,337 +1,368 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сучасна пекарня</title>
-    <link rel="stylesheet" href="/scss/main.css" />
+    <title>Meals America</title>
+    <link rel="stylesheet" href="../scss/reset.css" />
+    <link rel="stylesheet" href="../scss/styles.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__container">
+        <div class="header__inner">
           <nav class="header__nav">
-            <a class="logo-white" href="#">
-              <img src="/images/logo-white.svg" alt="Логотип сучаної пекарні" />
+            <a class="logo" href="#">
+              <img class="logo__img" src="/images/logo.svg" alt="Meals America logo" />
             </a>
-            <ul class="header__menu">
-              <li><a class="link" href="#traditions-section">Наші традиції</a></li>
-              <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
-              <li><a class="link" href="#formats-section">Формати</a></li>
-              <li><a class="link" href="#contacts-section">Контакти</a></li>
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="#">About Us</a></li>
+              <li class="header__item dropdown">
+                <a class="header__link" href="#">How It Works</a>
+              </li>
+              <li class="header__item"><a class="header__link" href="#">Menu</a></li>
+              <li class="header__item"><a class="header__link" href="#">Contact</a></li>
             </ul>
           </nav>
-          <button class="header__btn button modal-btn-open" type="button">Замовити дзвінок</button>
-          <button class="header__burger menu-btn-open" type="button">
-            <svg class="header__burger-img">
-              <use href="/images/icons.svg#icon-menu"></use>
-            </svg>
-          </button>
+          <button type="button" class="btn btn-primary header__btn modal-open-btn">Get Started</button>
         </div>
-      </div>
-      <div class="mobile-menu">
-        <a class="logo-black" href="#">
-          <img src="/images/logo-black.svg" alt="Логотип сучаної пекарні" />
-        </a>
-        <ul class="mobile-menu__list">
-          <li class="mobile-menu__item">
-            <a class="link" href="#traditions-section">Наші традиції</a>
-          </li>
-          <li class="mobile-menu__item"><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
-          <li class="mobile-menu__item"><a class="link" href="#formats-section">Формати</a></li>
-          <li class="mobile-menu__item"><a class="link" href="#contacts-section">Контакти</a></li>
-        </ul>
-        <button class="menu-btn-close">
-          <svg class="menu-btn-close__icon">
-            <use href="/images/icons.svg#icon-cross"></use>
-          </svg>
-        </button>
       </div>
     </header>
-    <main>
-      <section class="hero-section">
-        <h1 class="hero-section__title"><span class="text-brand">Сучасна</span> пекарня</h1>
-      </section>
-      <!-- <section class="advantages-section">
+    <section class="hero-section">
+        <div class="hero__inner">
+          <div class="container">
+            <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="accent">Free Meals delivered</span> to your doorstep!
+          </h1>
+          <p class="hero__text">We provide healthy, balanced meals delivered to your doorstep!</p>
+          <button type="button" class="btn hero__btn btn-secondary">How It Works</button>
+          <button type="button" class="btn hero__btn btn-primary">Get Started</button>
+        </div>
+          </div>
+      </div>
+    </section>
+    <section class="advantages-section">
       <div class="container">
-        <h2 class="visually-hidden">Переваги</h2>
-        <ul class="advantages-section__list">
-          <li class="advantages-section__item">Великий попит на ринку</li>
-          <li class="advantages-section__item">Доступні за бюджетом формати</li>
-          <li class="advantages-section__item">Досвідчена управлінська команда</li>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <article class="advantages__card">
+              <svg class="advantages__img">
+                <use href="/images/icons.svg#icon-flag"></use>
+              </svg>
+              <div class="advantages__item-content">
+                <h3 class="advantages__title">AAA & State Governments</h3>
+                <p class="advantages__text">
+                  Information for leaders in government or at Area Agencies on Aging.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="advantages__item">
+            <article class="advantages__card">
+              <svg class="advantages__img">
+                <use href="/images/icons.svg#icon-manager"></use>
+              </svg>
+              <div class="advantages__item-content">
+                <h3 class="advantages__title">Case Managers</h3>
+                <p class="advantages__text">
+                  Information for case managers who are looking for solutions for their clients or
+                  members.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="advantages__item">
+            <article class="advantages__card">
+              <svg class="advantages__img">
+                <use href="/images/icons.svg#icon-healthcare"></use>
+              </svg>
+              <div class="advantages__item-content">
+                <h3 class="advantages__title">Individuals & Caregivers</h3>
+                <p class="advantages__text">
+                  For self-pay customers managing a chronic disease, living independently, or
+                  caring.
+                </p>
+              </div>
+            </article>
+          </li>
         </ul>
       </div>
-    </section> -->
-      <!-- <section class="traditions-section section" id="traditions-section">
-        <div class="container">
-          <div class="traditions-section__container">
-            <div class="traditions-section__content">
-              <h2 class="traditions-section__title section__title">Новий формат традицій</h2>
-              <p>
-                <span class="text-brand text-bold text-uppercase">shop bakery</span> — це пекарня,
-                яка взяла все найкраще, і зберегла смак традиційної випічки та натуральність
-                інгредієнтів.
-              </p>
-              <p class="traditions-section__text--limited">
-                Ми працюємо як найвідоміші мережі—
-                <span class="text-brand text-bold">5 хвилин і замовлення готове</span>. А ще у наших
-                пекарень стильний дизайн та висока якість обслуговування!
-              </p>
-            </div>
-            <img
-              class="traditions-section__img"
-              src="/images/baker-man.jpg"
-              alt="Чоловік пекар дивиться на батони із посмішкою"
-            />
+    </section>
+    <section class="about-section">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__content">
+          <h2 class="about__title title">About Us</h2>
+          <div class="about__text text">
+            <p>
+              Meals America provides home-delivered meals to consumers across all 67 counties in
+              Florida. We offer a wide variety of frozen, refrigerated, and shelf-stable meals
+              including dinners, deli café, breakfasts, soups, and specialty weeks.
+            </p>
+            <p>
+              We also provide option for customers with dietary restrictions and have vegetarian,
+              sodium-controlled, and gluten-free menus. We also provide emergency packs for
+              emergency situations that contain shelf stable items only and do not require
+              refrigeration or heating.
+            </p>
           </div>
+          <button class="btn btn-secondary about__btn">Read more</button>
+          <ul class="about__list">
+            <li class="about__item">Gluten free options</li>
+            <li class="about__item">Vegetarian options</li>
+            <li class="about__item">Exact calorie content</li>
+            <li class="about__item">Adds strength and energy</li>
+            <li class="about__item">Improves health</li>
+          </ul>
         </div>
-      </section> -->
-      <!-- <section class="chefs-section" id="chefs-section">
-        <div class="container">
-          <h2 class="chefs-section__title section__title section__title--centered">
-            Наші найкращі<br /><span class="text-brand-dark">шеф -кухарі</span>
-          </h2>
-          <ul class="chefs-section__list">
-            <li class="chefs-section__item">
-              <article class="chef-card">
-                <img class="chef-card__img" src="/images/nastya.jpg" alt="Nastya chef" />
-                <div class="chef-card__content">
-                  <h3 class="chef-card__title">Настя</h3>
-                  <p class="chef-card__text">Привіт, я Настя!</p>
-                  <p class="chef-card__text">
-                    Вже 10 років, я втілюю<br />
-                    у життя цікаві та смачні ідеї.
-                  </p>
-                  <p class="chef-card__text">Я випічу для вас<br />найсмачніші вироби!</p>
-                </div>
-              </article>
+        </div>
+      </div>
+    </section>
+    <section class="benefits-section">
+      <div class="container">
+        <div class="benefits__inner">
+          <div class="benefits__content">
+          <h3 class="subtitle">Our benefits</h3>
+          <h2 class="title">Why choose us?</h2>
+          <div class="text">
+            <p>
+              We are proud to provide a healthy and nutritious meal for those in need! We listen to
+              your preferences and customize the weekly menu considering your requests! Your health
+              is our priority!
+            </p>
+          </div>
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <svg class="benefits__img">
+              <use href="/images/icons.svg#icon-burger">
+              </svg>
+              Delicious & Healthy
             </li>
-            <li class="chefs-section__item">
-              <article class="chef-card">
-                <img class="chef-card__img" src="/images/vlad.png" alt="Vlad chef" />
-                <div class="chef-card__content">
-                  <h3 class="chef-card__title">Влад</h3>
-                  <p class="chef-card__text">Привіт, я Влад!</p>
-                  <p class="chef-card__text">
-                    Мій кодитерський стаж вже 18 років.SHOP BEKERY - це наша любов, з якою ми
-                    ділимось кожен раз з Вами через нашу випічку!
-                  </p>
-                  <p class="chef-card__text">
-                    Я зроблю для вас унікальну начинку на будь який смак!
-                  </p>
-                </div>
-              </article>
+            <li class="benefits__item">
+              <svg class="benefits__img">
+              <use href="/images/icons.svg#icon-cutlery">
+              </svg>Ready to heat</li>
+            <li class="benefits__item">
+              <svg class="benefits__img">
+              <use href="/images/icons.svg#icon-truck">
+              </svg>Delivery</li>
+            <li class="benefits__item">
+              <svg class="benefits__img">
+              <use href="/images/icons.svg#icon-cooking">
+              </svg>
+              Taste and preferences
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- <section class="formats-section section" id="formats-section">
-        <div class="container">
-          <h2 class="formats-section__title section__title section__title--centered">Формати</h2>
-          <div class="formats-section__container">
-            <button class="carousel-button" type="button">
-              <svg class="carousel-arrow" width="16" height="16">
-                <use href="/images/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-            <ul class="formats-section__list">
-              <li class="formats-section__item">
-                <article class="format-card">
-                  <h3 class="format-card__title" lang="en">Walrus</h3>
-                  <p class="format-card__text">Площа: до 120 м2</p>
-                  <p class="format-card__text">Меню: розширене меню</p>
-                  <p class="format-card__text">
-                    Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби
-                  </p>
-                  <p class="format-card__text">Посадкові місця: є</p>
-                </article>
-              </li>
-              <li class="formats-section__item">
-                <article class="format-card">
-                  <h3 class="format-card__title" lang="en">Horseshoe</h3>
-                    <p class="format-card__text"></p>Площа: до 25 м2</p>
-                    <p class="format-card__text"></p>Меню: найпопулярніші позиції меню</p>
-                    <p class="format-card__text"></p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
-                    <p class="format-card__text"></p>Посадкові місця: відсутні</p>
-                </article>
-              </li>
-              <li class="formats-item">
-                <article class="format-card">
-                  <h3 class="format-card__title" lang="en">Handlebar</h3>
-                    <p class="format-card__text">Площа: до 15 м2</p>
-                    <p class="format-card__text">Меню: найпопулярніші позиції меню</p>
-                    <p class="format-card__text">Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
-                    <p class="format-card__text">Посадкові місця: відсутні</p>
-                </article>
-              </li>
-            </ul>
-            <button class="carousel-button next" type="button">
-              <svg class="carousel-arrow" width="16" height="16">
-                <use href="/images/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section> -->
-      <!-- <section class="contacts-section section" id="contacts-section">
-        <div class="container">
-          <div class="contacts-section__container">
-            <div class="contacts-section__content">
-              <h2 class="contacts-section__title section__title">Приєднуйся до мережі пекарень</h2>
-              <p class="contacts-section__text">Заповни форму, щоб ми звʼязались з тобою!</p>
-              <form class="contacts-section__form" action="#">
-                <div class="contacts-section__form-field input">
-                  <label class="input__label visually-hidden" for="username">Ім'я</label>
-                  <input
-                    class="input__control"
-                    name="username"
-                    id="username"
-                    type="text"
-                    placeholder="Ім’я"
-                  />
-                </div>
-                <div class="contacts-section__form-field input">
-                  <label class="input__label visually-hidden" for="phone">Телефон</label>
-                  <input
-                    class="input__control"
-                    name="phone"
-                    id="phone"
-                    type="tel"
-                    placeholder="Телефон"
-                  />
-                </div>
-                <div class="contacts-section__form-field input">
-                             <label class="input__label visually-hidden" for="email">Електронна пошта</label>
-                  <input
-                    class="input__control"
-                    name="email"
-                    id="email"
-                    type="email"
-                    placeholder="Електронна пошта"
-                  />
-                </div>
-              </form>
-              <button class="contacts-section__button button">Замовити дзвінок</button>
-              <p class="form-terms">
-          Натискаючи на кнопку я погоджуюсь
-          <a class="form-terms__link" href="#">з політикою конфіденційності</a>
-        </p>
-
-            </div>
-            <iframe
-              class="contacts-section__map"
-              width="603"
-              height="595"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1796.4723046757933!2d30.512884408995177!3d50.44863472446803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce59e3ab65a7%3A0x694b8565cab02eaf!2z0JfQvtC70L7RgtGWINCy0L7RgNC-0YLQsA!5e0!3m2!1suk!2sua!4v1702657593676!5m2!1suk!2sua"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </section> -->
-    </main>
-    <!-- <footer class="footer">
-      <div class="container">
-        <div class="footer-container">
-          <nav class="footer__nav">
-            <div class="footer__logo">
-              <a class="logo-white" href="#">
-                <img src="/images/logo-white.svg" alt="Логотип сучаної пекарні" />
-              </a>
-            </div>
-            <ul class="footer__list">
-              <li><a class="link" href="#">Наші традиції</a></li>
-              <li><a class="link" href="#">Шеф-кухарі</a></li>
-              <li><a class="link" href="#">Формати</a></li>
-              <li><a class="link" href="#">Контакти</a></li>
-            </ul>
-          </nav>
-          <address class="footer__address">
-            <ul class="footer__list">
-              <li><a class="footer__address-link" href="tel:380960000007">+ 38 (096) 000 00 07</a></li>
-              <li>
-                <a class="footer__address-link" href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
-              </li>
-              <li>
-                <a
-                  class="footer__address-link"
-                  href="https://maps.app.goo.gl/GgAnGCB2JnojJNKF9"
-                  target="_blank"
-                >
-                  Україна, м. Київ, вул. Січових Стрільців 54
-                </a>
-              </li>
-              <li>
-                <div class="footer__socials">
-                  <a href="#">
-                    <svg class="footer__address-icon" width="32" height="32">
-                      <use href="/images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                  <a href="#">
-                    <svg class="footer__address-icon" width="32" height="32">
-                      <use href="/images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </div>
-              </li>
-            </ul>
-            <div class="footer__copyright">
-              <a class="link" href="#" target="_blank">Політика конфіденційності</a>
-              <p class="footer__address-copyright">&copy; 2022 Дані захищені</p>
-            </div>
-          </address>
+        <img class="decor-img" src="/images/decor-spinach.png" alt="">
         </div>
       </div>
-    </footer> -->
+    </section>
+    <section class="nutrition-section">
+      <div class="nutrition__inner">
+        <h3 class="nutrition__subtitle subtitle">Nutrition plans</h3>
+      <h2 class="nutrition__title">Choose Your Nutrition</h2>
+      <div class="nutrition__content">
+        <ul class="nutrition__list">
+          <li class="nutrition__item">
+            <svg class="nutrition__item-img">
+              <use href="/images/icons.svg#icon-hat"></use>
+            </svg>
+            Gourmet
+          </li>
+          <li class="nutrition__item">
+            <svg class="nutrition__item-img">
+              <use href="/images/icons.svg#icon-care"></use>
+            </svg>
+            Comfort
+          </li>
+          <li class="nutrition__item">
+            <svg class="nutrition__item-img">
+              <use href="/images/icons.svg#icon-delivery"></use>
+            </svg>
+            Deli
+          </li>
+          <li class="nutrition__item">
+            <svg class="nutrition__item-img">
+              <use href="/images/icons.svg#icon-hat"></use>
+            </svg>
+            International
+          </li>
+          <li class="nutrition__item">
+            <svg class="nutrition__item-img">
+              <use href="/images/icons.svg#icon-hat"></use>
+            </svg>
+            Family
+          </li>
+          <li class="nutrition__item">
+            <svg class="nutrition__item-img">
+              <use href="/images/icons.svg#icon-hat"></use>
+            </svg>
+            Homestyle
+          </li>
+        </ul>
+        <div class="nutrition__meals">
+          <img class="nutrition__img" src="/images/vegetable-plate.jpg" alt="A plate with a vegetables">
+          <div class="nutrition__ingredients">
+            <p class="nutrition__list-title">Meals includes:</p>
+            <ul class="nutrition__meals-list">
+              <li class="nutrition__list-item">Loaf of Bread</li>
+              <li class="nutrition__list-item">Sticks of Butter</li>
+              <li class="nutrition__list-item">Quart of Juice</li>
+              <li class="nutrition__list-item">Half Callon of 2% Milk</li>
+              <li class="nutrition__list-item">Box of Cereal or Oat Meal</li>
+              <li class="nutrition__list-item">Package of Cheese Sticks or Cheese Slices</li>
+              <li class="nutrition__list-item">Pack of Fruits Cups</li>
+              <li class="nutrition__list-item">Complimentary Dessert</li>
+          </ul>
+          <button type="button" class="btn btn-secondary">Download Menu</button>
+          <button type="button" class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="schledule-section">
+      <div class="container">
+       <div class="schledule__content">
+         <h2 class="schledule__title">Schedule your first <span class="accent">weekly</span> delivery</h2>
+        <button class="schledule__btn btn">Get Started</button>
+       </div>
+      </div>
+    </section>
+    <section class="serve-section">
+      <div class="container">
+       <div class="serve__inner">
+         <div class="serve__content">
+          <h3 class="serve__subtitle subtitle">Who We Serve?</h3>
+          <h2 class="serve__title title">Who We Serve?</h2>
+          <p class="serve__text text">We serve those in need for long-term meal assistance or anyone who might be in need of a short-term plan while recovering from an injury or illness, or who would simply enjoy healthy meals that require minimal preparation time.</p>
+          <ul class="serve__items">
+            <li class="serve__item">
+              <svg class="serve__img">
+                <use href="/images/icons.svg#icon-clock">
+              </svg>
+              Monday - Friday 9:00 AM - 5:00 PM
+            </li>
+            <li class="serve__item">
+              <svg class="serve__img">
+                <use href="/images/icons.svg#icon-phone-arrow">
+              </svg>
+              (786) 600-59-09
+            </li>
+          </ul>
+          <button class="btn btn-secondary serve__btn">Read more</button>
+        </div>
+       </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+           <div>
+              <a class="logo" href="#">
+                <img class="logo__img" src="/images/logo.svg" alt="Meals America logo" />
+              </a>
+              <p class="footer__text">All rights resereved <a class="footer__link" href="#">MealsAmericaFL.com</a> is based in the Florida area and provides home-delivered meals to consumers across ALL sixty seven counties in Florida.</p>
+           </div>
+           <address class="footer__contacts">
+            <h3 class="footer__title">Contact info</h3>
+            <ul class="footer__list">
+              <li class="footer__contacts-item limited">
+              <svg class="footer__icon">
+              <use href="/images/icons.svg#icon-map-pin"></use>
+            </svg>
+            1733 Benbow Ct, Ste 3, Apopka, FL, 32703
+            </li>
+            <li class="footer__contacts-item">
+              <svg class="footer__icon">
+              <use href="/images/icons.svg#icon-phone"></use>
+            </svg>
+            (786) 600-59-09
+            </li>
+            <li class="footer__contacts-item">
+              <svg class="footer__icon">
+              <use href="/images/icons.svg#icon-mail"></use>
+            </svg>
+            Support@MealsAmericaFL.com
+            </li>
+            </ul>
+           </address>
+           <nav class="footer__menu">
+            <h3 class="footer__title">Links</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__item-link" href="#">About Us</a></li>
+              <li class="footer__item"><a class="footer__item-link" href="#">How it works</a></li>
+              <li class="footer__item"><a class="footer__item-link" href="#">Our menu</a></li>
+              <li class="footer__item"><a class="footer__item-link" href="#">Contact Us</a></li>
+            </ul>
+           </nav>
+      </div>
+    </footer>
+    <section class="copyright-section">
+      <div class="container">
+        &copy;All rights resereved <a class="copyright__link" href="#">MealsAmericaFL.com</a>
+      </div>
+    </section>
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal-btn-close" type="button">Close</button>
-        <h2 class="modal__title">Замовити дзвінок</h2>
-        <p class="modal__text">Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-        <form class="modal__form" action="">
-          <div class="modal__form-field">
-            <label class="input__label visually-hidden" for="username">Ім'я</label>
-            <input
-              class="input__control"
-              name="username"
-              id="username"
-              type="text"
-              placeholder="Ім’я"
-            />
+        <button class="modal-close-btn" type="button">
+          <svg class="modal__icon">
+            <use href="/images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="modal__title">Get Started</h2>
+        <form class="modal__form" action="#">
+          <div class="modal__form-data">
+            <label class="modal__label required" for="name">Name</label>
+            <input class="modal__input" type="text" id="name" name="name" required>
           </div>
-          <div class="modal__form-field">
-            <label class="input__label visually-hidden" for="phone">Телефон</label>
-            <input
-              class="input__control"
-              name="phone"
-              id="phone"
-              type="tel"
-              placeholder="Телефон"
-            />
+          <div class="modal__form-data">
+            <label class="modal__label" for="organization">Organization</label>
+            <input class="modal__input" type="text" id="organization" name="organization">
           </div>
-          <div class="modal__form-field">
-            <label class="input__label visually-hidden" for="email">Електронна пошта</label>
-            <input
-              class="input__control"
-              name="email"
-              id="email"
-              type="email"
-              placeholder="Електронна пошта"
-            />
+          <div class="modal__form-data">
+            <label class="modal__label" for="email">E-mail Address</label>
+            <input class="modal__input" type="email" id="email" name="email">
           </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="city">City</label>
+            <input class="modal__input" type="text" id="city" name="city" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="country">Country</label>
+            <input class="modal__input" type="text" id="country" name="country" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="zipcode">Zip Code</label>
+            <input class="modal__input" type="number" id="zipcode" name="zipcode" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="number">Phone Number</label>
+            <input class="modal__input" type="tel" id="number" name="number" required>
+          </div>
+          <div class="modal__form-data">
+            <label class="modal__label required" for="state">State</label>
+            <input class="modal__input" type="text" id="state" name="state" required>
+          </div>
+          <div class="modal__form-data full-width">
+            <label class="modal__label required" for="needs">Tell us about your needs</label>
+             <select class="modal__input modal__select" id="needs" required>
+                  <option value="" disabled selected>—Please choose an option—</option>
+                  <option class="modal__option" value="customer">I'm a current customer needing assistance</option>
+                  <option class="modal__option" value="caregiver">I'm a caregiver or need meals for myself</option>
+                  <option class="modal__option" value="case manager">I'm a case manager needing meals for clients</option>
+                  <option class="modal__option" value="healthcare organization">I represent a healthcare organization needing information for patients</option>
+            </select>
+          </div>
+          <label class="modal__label" for="comments">Provide any additional comments</label>
+          <textarea class="modal__comments full-width" name="comments" id="comments">
+          </textarea>
+          <button class="modal__btn btn btn-primary">submit</button>
+
         </form>
-        <button type="button" class="modal__button button">Замовити дзвінок</button>
-        <p class="form-terms">
-          Натискаючи на кнопку я погоджуюсь
-          <a class="form-terms__link" href="#">з політикою конфіденційності</a>
-        </p>
       </div>
     </div>
-    <script src="/script.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
